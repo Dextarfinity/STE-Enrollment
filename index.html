@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ampayon National High School | STE Enrollment</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+        <style>
+            html,
+            body {
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+            }
+            body {
+            height: 100%;
+            }
+            main {
+            flex: 1; /* Ensures main content stretches to fill available space */
+            }
+            .footer {
+            position: sticky;
+            bottom: 0;
+            z-index: 1030; /* Ensures it appears above background content */
+            }
+            .navbar {
+            z-index: 1050; /* Higher than other elements */
+            }
+            @media (max-width: 460px) {
+            .text-background {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 15px; /* Space around the text */
+            border-radius: 8px; /* Rounded edges */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            }
+            }
+            .text-background-mini {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            padding: 15px; /* Space around the text */
+            border-radius: 8px; /* Rounded edges */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            }
+            .text-background-mini2 {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+            padding: 15px; /* Space around the text */
+            border-radius: 8px; /* Rounded edges */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            }
+            /* CUSTOMIZE THE CAROUSEL
+            -------------------------------------------------- */
+            /* Carousel base class */
+            .carousel {
+            margin-bottom: 4rem;
+            }
+            /* Since positioning the image, we need to help out the caption */
+            .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+            }
+            /* Declare heights because of positioning of img element */
+            .carousel-item {
+            height: 32rem;
+            }
+            .carousel-items {
+            height: 20rem;
+            }
+            .carousel-indicatorsOwn{
+            top: 22em;
+            }
+            .carousel-indicatorsOwn button {
+            background-color: gray; /* Set the color of the indicator */
+            border: none; /* Remove the border if present */
+            width: 12px; /* Optional: Adjust size */
+            height: 12px;
+            }
+            /* Active indicator */
+            .carousel-indicatorsOwn .active {
+            background-color: black; /* Set a different color for the active indicator */
+            }
+            /* Inactive indicator */
+            .carousel-indicatorsOwn button:not(.active) {
+            background-color: black; /* Set the color for inactive indicators */
+            }
+            /* Optional: Hover effect */
+            .carousel-indicatorsOwn button:hover {
+            background-color: gray; /* Color on hover */
+            }
+            /* MARKETING CONTENT
+            -------------------------------------------------- */
+            /* Center align the text within the three columns below the carousel */
+            .marketing .col-lg-4 {
+            text-align: center;
+            }
+            /* rtl:begin:ignore */
+            .marketing .col-lg-4 p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+            }
+            /* rtl:end:ignore */
+            /* Featurettes
+            ------------------------- */
+            .carousel-control-prev-icons,
+            .carousel-control-next-icons {
+            background-image: none; /* Remove the default Bootstrap icon */
+            }
+            .carousel-control-prev-icons::after,
+            .carousel-control-next-icons::after {
+            content: '❮'; /* Use a left arrow for "previous" */
+            color: black; /* Set the icon color to black */
+            font-size: 2rem; /* Adjust the size as needed */
+            }
+            .carousel-control-next-icons::after {
+            content: '❯'; /* Use a right arrow for "next" */
+            }
+            .featurette-divider {
+            margin: 5rem 0; /* Space out the Bootstrap 
+            <hr>
+            more */
+            }
+            /* Thin out the marketing headings */
+            /* rtl:begin:remove */
+            .featurette-heading {
+            letter-spacing: -.05rem;
+            }
+            /* rtl:end:remove */
+            /* RESPONSIVE CSS
+            -------------------------------------------------- */
+            @media (min-width: 40em) {
+            /* Bump up size of carousel content */
+            .carousel-caption p {
+            margin-bottom: 1.25rem;
+            font-size: 1.25rem;
+            line-height: 1.4;
+            }
+            .featurette-heading {
+            font-size: 50px;
+            }
+            }
+            @media (min-width: 62em) {
+            .featurette-heading {
+            margin-top: 7rem;
+            }
+            }
+            @media (max-width: 768px) {
+            .carousel2 {
+            display: none; /* Hide the carousel on smaller screens */
+            }
+            .carousel-grid2 {
+            display: block; /* Show grid layout on smaller screens */
+            }
+            }
+            @media (min-width: 769px) {
+            .carousel-grid2 {
+            display: none; /* Hide the grid layout on larger screens */
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                    <img
+                        src="images/logo.jpg"
+                        alt="Ampayon NHS Logo"
+                        class="img-fluid"
+                        style="max-height: 40px; border-radius: 50%"
+                        />
+                    Ampayon NHS
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample07"
+                        aria-controls="navbarsExample07"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        >
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarsExample07">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="enrollment.html">Enrollment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#myCarousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                        ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#myCarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                        ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#myCarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                        ></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div
+                            style="
+                            position: relative;
+                            width: 100%;
+                            height: 500px;
+                            overflow: hidden;
+                            "
+                            >
+                            <img
+                                src="images/edit10.jpg"
+                                alt=""
+                                style="
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                "
+                                />
+                        </div>
+                        <div class="container">
+                            <div
+                                class="carousel-caption text-start"
+                                style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
+                                >
+                                <h1>Advance Subjects</h1>
+                                <p>Designed for high achievers who aim for the top. Excel in subjects like Research and Problem Solving.</p>
+                                <button
+                                type="button"
+                                class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
+                                >
+                             Learn More
+                             </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div
+                            style="
+                            position: relative;
+                            width: 100%;
+                            height: 500px;
+                            overflow: hidden;
+                            "
+                            >
+                            <img
+                                src="images/edit2.jpg"
+                                alt=""
+                                style="                     position: absolute;
+                                top: 60px;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;"
+                                />
+                        </div>
+                        <div class="container">
+                            <div
+                                class="carousel-caption"
+                                style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
+                                >
+                                <h1>Expert Teachers</h1>
+                                <p>Learn from the best educators who are passionate about your success.</p>
+                                <button
+                                type="button"
+                                class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
+                                >
+                             Learn More
+                             </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div
+                            style="
+                            position: relative;
+                            width: 100%;
+                            height: 500px;
+                            overflow: hidden;
+                            "
+                            >
+                            <img
+                                src="images/edit7.png"
+                                alt=""
+                                style="
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                "
+                                />
+                        </div>
+                        <div class="container">
+                            <div
+                                class="carousel-caption text-end"
+                                style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
+                                >
+                                <h1>Limited Slots Available</h1>
+                                <p>Don't miss your chance to secure a spot in the STE for the upcoming school year.</p>
+                                <button
+                                type="button"
+                                class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
+                                >
+                             Enroll Now
+                             </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide="prev"
+                    >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#myCarousel"
+                    data-bs-slide="next"
+                    >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- Marketing messaging and featurettes
+                ================================================== -->
+            <!-- Wrap the rest of the page in another container to center all the content. -->
+            <div class="container marketing">
+                  <div class="text-center mb-5">
+                     <h2>Contributors</h2>
+                  </div>
+            <div id="carouselExampleIndicators" class="carousel slide carousel2" data-bs-ride="carousel">
+                <div class="carousel-indicators carousel-indicatorsOwn">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item carousel-items active">
+                     <div class="row">
+                         <div class="col-lg-4">
+                             <img class="bd-placeholder-img rounded-circle" src="images/crishawoo.jpg" alt="Image 1" width="140" height="140">
+                             <h2 class="fw-normal">Student</h2>
+                             <h5>Crisha Mae P. Celestino</h5>
+                             <p>Grade 7 STE Student, Aesthete</p>
+                         </div>
+                         <div class="col-lg-4">
+                             <img class="bd-placeholder-img rounded-circle" src="images/abey.jpg" alt="Image 2" width="140" height="140">
+                             <h2 class="fw-normal">Student</h2>
+                             <h5>Abey Sky C. Resola</h5>
+                             <p>Grade 7 STE Student, Connoisseur</p>
+                         </div>
+                         <div class="col-lg-4">
+                             <img class="bd-placeholder-img rounded-circle" src="images/abigil.jpg" alt="Image 3" width="140" height="140">
+                             <h2 class="fw-normal">Student</h2>
+                             <h5>Abigail T. Delgado</h5>
+                             <p>Grade 7 STE Student, Optimistic</p>
+                         </div>
+                     </div>
+                 </div>                 
+                    <div class="carousel-item carousel-items">
+                        <div class="row">
+                           <div class="col-lg-4">
+                              <img class="bd-placeholder-img rounded-circle" src="images/toledo.jpg" alt="Image 1" width="140" height="140">
+                              <h2 class="fw-normal">Teacher</h2>
+                              <h5>Orlando Toledo</h5>
+                              <p>Creative Tech Teacher, Computer Laboratory, Photographer</p>
+                          </div>
+                          <div class="col-lg-4">
+                           <img class="bd-placeholder-img rounded-circle" src="images/tiongson.jpg" alt="Image 1" width="140" height="140">
+                           <h2 class="fw-normal">Adviser</h2>
+                           <h5>Ruth Ann Tiongson</h5>
+                           <p>Science Teacher, Grade 7 STE Adviser</p>
+                       </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icons carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icons carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- Grid layout for small screens -->
+            <div class="carousel-grid2 row">
+                <div class="col-lg-4 col-md-6">
+                    <img class="bd-placeholder-img rounded-circle" src="images/crishawoo.jpg" alt="Image 1" width="140" height="140">        
+                    <h2 class="fw-normal">Heading</h2>
+                    <p>Some representative placeholder content for the first column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <img class="bd-placeholder-img rounded-circle" src="images/crishawoo.jpg" alt="Image 1" width="140" height="140">        
+                  <h2 class="fw-normal">Heading</h2>
+                  <p>Some representative placeholder content for the first column.</p>
+                  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+              </div>
+               <div class="col-lg-4 col-md-6">
+                    <img class="bd-placeholder-img rounded-circle" src="images/crishawoo.jpg" alt="Image 1" width="140" height="140">        
+                    <h2 class="fw-normal">Heading</h2>
+                    <p>Some representative placeholder content for the first column.</p>
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <img class="bd-placeholder-img rounded-circle" src="images/crishawoo.jpg" alt="Image 1" width="140" height="140">        
+                  <h2 class="fw-normal">Heading</h2>
+                  <p>Some representative placeholder content for the first column.</p>
+                  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+              </div>
+              <div class="col-lg-4 col-md-6">
+               <img class="bd-placeholder-img rounded-circle" src="images/crishawoo.jpg" alt="Image 1" width="140" height="140">        
+               <h2 class="fw-normal">Heading</h2>
+               <p>Some representative placeholder content for the first column.</p>
+               <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+           </div>
+            </div>
+            <!-- START THE FEATURETTES -->
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                    <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"/>
+                        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"/>
+                        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                    <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"/>
+                        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg>
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <span class="text-muted"
+                    >&copy; Ampayon National High School | STE | 2025</span
+                    >
+            </div>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
