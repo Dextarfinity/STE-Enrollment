@@ -1,561 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ampayon National High School | STE Enrollment</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="icon" href="images/logo.jpg" type="image/x-icon">
-        <style>
-            html,
-            body {
-            height: 100%;
-            overflow-x: hidden; /* Prevent horizontal overflow */
-            }
-            body {
-            height: 100%;
-            }
-            main {
-            flex: 1; /* Ensures main content stretches to fill available space */
-            }
-            .footer {
-            position: sticky;
-            bottom: 0;
-            z-index: 1030; /* Ensures it appears above background content */
-            }
-            .navbar {
-            z-index: 1050; /* Higher than other elements */
-            }
-            @media (max-width: 460px) {
-            .text-background {
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-            padding: 15px; /* Space around the text */
-            border-radius: 8px; /* Rounded edges */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            }
-            }
-            .text-background-mini {
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
-            padding: 15px; /* Space around the text */
-            border-radius: 8px; /* Rounded edges */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            }
-            .text-background-mini2 {
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-            padding: 15px; /* Space around the text */
-            border-radius: 8px; /* Rounded edges */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            }
-            /* CUSTOMIZE THE CAROUSEL
-            -------------------------------------------------- */
-            /* Carousel base class */
-            .carousel {
-            margin-bottom: 4rem;
-            }
-            /* Since positioning the image, we need to help out the caption */
-            .carousel-caption {
-            bottom: 3rem;
-            z-index: 10;
-            }
-            /* Declare heights because of positioning of img element */
-            .carousel-item {
-            height: 32rem;
-            }
-            .carousel-items {
-            height: 20rem;
-            }
-            .carousel-indicatorsOwn{
-            top: 22em;
-            }
-            .carousel-indicatorsOwn button {
-            background-color: gray; /* Set the color of the indicator */
-            border: none; /* Remove the border if present */
-            width: 12px; /* Optional: Adjust size */
-            height: 12px;
-            }
-            /* Active indicator */
-            .carousel-indicatorsOwn .active {
-            background-color: black; /* Set a different color for the active indicator */
-            }
-            /* Inactive indicator */
-            .carousel-indicatorsOwn button:not(.active) {
-            background-color: black; /* Set the color for inactive indicators */
-            }
-            /* Optional: Hover effect */
-            .carousel-indicatorsOwn button:hover {
-            background-color: gray; /* Color on hover */
-            }
-            /* MARKETING CONTENT
-            -------------------------------------------------- */
-            /* Center align the text within the three columns below the carousel */
-            .marketing .col-lg-4 {
-            text-align: center;
-            }
-            /* rtl:begin:ignore */
-            .marketing .col-lg-4 p {
-            margin-right: .75rem;
-            margin-left: .75rem;
-            }
-            /* rtl:end:ignore */
-            /* Featurettes
-            ------------------------- */
-            .carousel-control-prev-icons,
-            .carousel-control-next-icons {
-            background-image: none; /* Remove the default Bootstrap icon */
-            }
-            .carousel-control-prev-icons::after,
-            .carousel-control-next-icons::after {
-            content: '❮'; /* Use a left arrow for "previous" */
-            color: black; /* Set the icon color to black */
-            font-size: 2rem; /* Adjust the size as needed */
-            }
-            .carousel-control-next-icons::after {
-            content: '❯'; /* Use a right arrow for "next" */
-            }
-            .featurette-divider {
-            margin: 5rem 0; /* Space out the Bootstrap 
-            <hr>
-            more */
-            }
-            /* Thin out the marketing headings */
-            /* rtl:begin:remove */
-            .featurette-heading {
-            letter-spacing: -.05rem;
-            }
-            .image-container {
-            width: 100%;
-            height: 700px;
-            overflow: hidden;
-            }
-            .image-container2 {
-            width: 100%;
-            height: 450px;
-            overflow: hidden;
-            }
-            .cropped-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: left;
-            }
-            .cropped-image2 {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: right;
-            } 
-            /* rtl:end:remove */
-            /* RESPONSIVE CSS
-            -------------------------------------------------- */
-            @media (min-width: 40em) {
-            /* Bump up size of carousel content */
-            .carousel-caption p {
-            margin-bottom: 1.25rem;
-            font-size: 1.25rem;
-            line-height: 1.4;
-            }
-            .featurette-heading {
-            font-size: 50px;
-            }
-            }
-            @media (min-width: 62em) {
-            .featurette-heading {
-            margin-top: 7rem;
-            }
-            }
-            @media (max-width: 768px) {
-            .carousel2 {
-            display: none; /* Hide the carousel on smaller screens */
-            }
-            .carousel-grid2 {
-            display: block; /* Show grid layout on smaller screens */
-            }
-            .image-container {
-            width: 100%;
-            height: auto; /* Remove fixed height */
-            overflow: visible; /* Allow image to show fully */
-            }
-            .cropped-image {
-            border-radius: 5px;
-            width: 100%;
-            height: auto; /* Allow height to adjust automatically */
-            object-fit: contain; /* Ensure the entire image is visible */
-            object-position: center; /* Center the image */
-            }
-            .cropped-image2 {
-            border-radius: 5px;
-            width: 100%;
-            height: auto; /* Allow height to adjust automatically */
-            object-fit: contain; /* Ensure the entire image is visible */
-            object-position: center; /* Center the image */
-            }
-            }
-            @media (min-width: 769px) {
-            .carousel-grid2 {
-            display: none; /* Hide the grid layout on larger screens */
-            }
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                    <img
-                        src="images/logo.jpg"
-                        alt="Ampayon NHS Logo"
-                        class="img-fluid"
-                        style="max-height: 40px; border-radius: 50%"
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Ampayon National High School | STE Enrollment</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+      <style>
+         html,
+         body {
+         height: 100%;
+         overflow-x: hidden; /* Prevent horizontal overflow */
+         }
+         body {
+         height: 100%;
+         }
+         main {
+         flex: 1; /* Ensures main content stretches to fill available space */
+         }
+         .footer {
+         position: sticky;
+         bottom: 0;
+         z-index: 1030; /* Ensures it appears above background content */
+         }
+         .navbar {
+         z-index: 1050; /* Higher than other elements */
+         }
+         @media (max-width: 460px) {
+         .text-background {
+         background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+         padding: 15px; /* Space around the text */
+         border-radius: 8px; /* Rounded edges */
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+         }
+         }
+         .text-background-mini {
+         background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+         padding: 15px; /* Space around the text */
+         border-radius: 8px; /* Rounded edges */
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+         }
+         .text-background-mini2 {
+         background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+         padding: 15px; /* Space around the text */
+         border-radius: 8px; /* Rounded edges */
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+         }
+         /* CUSTOMIZE THE CAROUSEL
+         -------------------------------------------------- */
+         /* Carousel base class */
+         .carousel {
+         margin-bottom: 4rem;
+         }
+         /* Since positioning the image, we need to help out the caption */
+         .carousel-caption {
+         bottom: 3rem;
+         z-index: 10;
+         }
+         /* Declare heights because of positioning of img element */
+         .carousel-item {
+         height: 32rem;
+         }
+         .carousel-items {
+         height: 20rem;
+         }
+         .carousel-indicatorsOwn{
+         top: 22em;
+         }
+         .carousel-indicatorsOwn button {
+         background-color: gray; /* Set the color of the indicator */
+         border: none; /* Remove the border if present */
+         width: 12px; /* Optional: Adjust size */
+         height: 12px;
+         }
+         /* Active indicator */
+         .carousel-indicatorsOwn .active {
+         background-color: black; /* Set a different color for the active indicator */
+         }
+         /* Inactive indicator */
+         .carousel-indicatorsOwn button:not(.active) {
+         background-color: black; /* Set the color for inactive indicators */
+         }
+         /* Optional: Hover effect */
+         .carousel-indicatorsOwn button:hover {
+         background-color: gray; /* Color on hover */
+         }
+         /* MARKETING CONTENT
+         -------------------------------------------------- */
+         /* Center align the text within the three columns below the carousel */
+         .marketing .col-lg-4 {
+         text-align: center;
+         }
+         /* rtl:begin:ignore */
+         .marketing .col-lg-4 p {
+         margin-right: .75rem;
+         margin-left: .75rem;
+         }
+         /* rtl:end:ignore */
+         /* Featurettes
+         ------------------------- */
+         .carousel-control-prev-icons,
+         .carousel-control-next-icons {
+         background-image: none; /* Remove the default Bootstrap icon */
+         }
+         .carousel-control-prev-icons::after,
+         .carousel-control-next-icons::after {
+         content: '❮'; /* Use a left arrow for "previous" */
+         color: black; /* Set the icon color to black */
+         font-size: 2rem; /* Adjust the size as needed */
+         }
+         .carousel-control-next-icons::after {
+         content: '❯'; /* Use a right arrow for "next" */
+         }
+         .featurette-divider {
+         margin: 5rem 0; /* Space out the Bootstrap 
+         <hr>
+         more */
+         }
+         /* Thin out the marketing headings */
+         /* rtl:begin:remove */
+         .featurette-heading {
+         letter-spacing: -.05rem;
+         }
+         .image-container {
+         width: 100%;
+         height: 700px;
+         overflow: hidden;
+         }
+         .image-container2 {
+         width: 100%;
+         height: 450px;
+         overflow: hidden;
+         }
+         .cropped-image {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: left;
+         }
+         .cropped-image2 {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: right;
+         } 
+         /* rtl:end:remove */
+         /* RESPONSIVE CSS
+         -------------------------------------------------- */
+         @media (min-width: 40em) {
+         /* Bump up size of carousel content */
+         .carousel-caption p {
+         margin-bottom: 1.25rem;
+         font-size: 1.25rem;
+         line-height: 1.4;
+         }
+         .featurette-heading {
+         font-size: 50px;
+         }
+         }
+         @media (min-width: 62em) {
+         .featurette-heading {
+         margin-top: 7rem;
+         }
+         }
+         @media (max-width: 768px) {
+         .carousel2 {
+         display: none; /* Hide the carousel on smaller screens */
+         }
+         .carousel-grid2 {
+         display: block; /* Show grid layout on smaller screens */
+         }
+         .image-container {
+         width: 100%;
+         height: auto; /* Remove fixed height */
+         overflow: visible; /* Allow image to show fully */
+         }
+         .cropped-image {
+         border-radius: 5px;
+         width: 100%;
+         height: auto; /* Allow height to adjust automatically */
+         object-fit: contain; /* Ensure the entire image is visible */
+         object-position: center; /* Center the image */
+         }
+         .cropped-image2 {
+         border-radius: 5px;
+         width: 100%;
+         height: auto; /* Allow height to adjust automatically */
+         object-fit: contain; /* Ensure the entire image is visible */
+         object-position: center; /* Center the image */
+         }
+         }
+         @media (min-width: 769px) {
+         .carousel-grid2 {
+         display: none; /* Hide the grid layout on larger screens */
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">
+            <div class="container">
+               <a class="navbar-brand" href="index.html">
+               <img
+                  src="images/logo.jpg"
+                  alt="Ampayon NHS Logo"
+                  class="img-fluid"
+                  style="max-height: 40px; border-radius: 50%"
+                  />
+               Ampayon NHS
+               </a>
+               <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarsExample07"
+                  aria-controls="navbarsExample07"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  >
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarsExample07">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="enrollment.html">Enrollment</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <main>
+         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+               <button
+                  type="button"
+                  data-bs-target="#myCarousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                  ></button>
+               <button
+                  type="button"
+                  data-bs-target="#myCarousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                  ></button>
+               <button
+                  type="button"
+                  data-bs-target="#myCarousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                  ></button>
+            </div>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div
+                     style="
+                     position: relative;
+                     width: 100%;
+                     height: 500px;
+                     overflow: hidden;
+                     "
+                     >
+                     <img
+                        src="images/edit10.jpg"
+                        alt=""
+                        style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        "
                         />
-                    Ampayon NHS
-                    </a>
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarsExample07"
-                        aria-controls="navbarsExample07"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
+                  </div>
+                  <div class="container">
+                     <div
+                        class="carousel-caption text-start"
+                        style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
                         >
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarsExample07">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="enrollment.html">Enrollment</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button
-                        type="button"
-                        data-bs-target="#myCarousel"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide 1"
-                        ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#myCarousel"
-                        data-bs-slide-to="1"
-                        aria-label="Slide 2"
-                        ></button>
-                    <button
-                        type="button"
-                        data-bs-target="#myCarousel"
-                        data-bs-slide-to="2"
-                        aria-label="Slide 3"
-                        ></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div
-                            style="
-                            position: relative;
-                            width: 100%;
-                            height: 500px;
-                            overflow: hidden;
-                            "
-                            >
-                            <img
-                                src="images/edit10.jpg"
-                                alt=""
-                                style="
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                "
-                                />
-                        </div>
-                        <div class="container">
-                            <div
-                                class="carousel-caption text-start"
-                                style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
-                                >
-                                <h1>Advance Subjects</h1>
-                                <p>Designed for high achievers who aim for the top. Excel in subjects like Research and Problem Solving.</p>
-                                <button
-                                    type="button"
-                                    class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
-                                    >
-                                Learn More
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div
-                            style="
-                            position: relative;
-                            width: 100%;
-                            height: 500px;
-                            overflow: hidden;
-                            "
-                            >
-                            <img
-                                src="images/edit2.jpg"
-                                alt=""
-                                style="                     position: absolute;
-                                top: 60px;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;"
-                                />
-                        </div>
-                        <div class="container">
-                            <div
-                                class="carousel-caption"
-                                style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
-                                >
-                                <h1>Expert Teachers</h1>
-                                <p>Learn from the best educators who are passionate about your success.</p>
-                                <button
-                                    type="button"
-                                    class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
-                                    >
-                                Learn More
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div
-                            style="
-                            position: relative;
-                            width: 100%;
-                            height: 500px;
-                            overflow: hidden;
-                            "
-                            >
-                            <img
-                                src="images/edit7.png"
-                                alt=""
-                                style="
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                "
-                                />
-                        </div>
-                        <div class="container">
-                            <div
-                                class="carousel-caption text-end"
-                                style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
-                                >
-                                <h1>Limited Slots Available</h1>
-                                <p>Don't miss your chance to secure a spot in the STE for the upcoming school year.</p>
-                                <button
-                                    type="button"
-                                    class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
-                                    >
-                                Enroll Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#myCarousel"
-                    data-bs-slide="prev"
-                    >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#myCarousel"
-                    data-bs-slide="next"
-                    >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
+                        <h1>Advance Subjects</h1>
+                        <p>Designed for high achievers who aim for the top. Excel in subjects like Research and Problem Solving.</p>
+                        <button
+                           type="button"
+                           class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
+                           >
+                        Learn More
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div
+                     style="
+                     position: relative;
+                     width: 100%;
+                     height: 500px;
+                     overflow: hidden;
+                     "
+                     >
+                     <img
+                        src="images/edit2.jpg"
+                        alt=""
+                        style="                     position: absolute;
+                        top: 60px;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;"
+                        />
+                  </div>
+                  <div class="container">
+                     <div
+                        class="carousel-caption"
+                        style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
+                        >
+                        <h1>Expert Teachers</h1>
+                        <p>Learn from the best educators who are passionate about your success.</p>
+                        <button
+                           type="button"
+                           class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
+                           >
+                        Learn More
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div
+                     style="
+                     position: relative;
+                     width: 100%;
+                     height: 500px;
+                     overflow: hidden;
+                     "
+                     >
+                     <img
+                        src="images/edit7.png"
+                        alt=""
+                        style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        "
+                        />
+                  </div>
+                  <div class="container">
+                     <div
+                        class="carousel-caption text-end"
+                        style="background-color: rgba(0, 0, 0, 0.6); color: rgba(255, 255, 255, 0.8);padding: 10px; border-radius: 5px;"
+                        >
+                        <h1>Limited Slots Available</h1>
+                        <p>Don't miss your chance to secure a spot in the STE for the upcoming school year.</p>
+                        <button
+                           type="button"
+                           class="btn btn-success btn-lg px-4 me-md-2 fw-bold"
+                           >
+                        Enroll Now
+                        </button>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="container">
-                <div
-                    class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
-                    style="background-image: url('images/edit9.jpg'); background-size: cover; background-position: center;"
-                    >
-                    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3 text-black">
-                        <h1 class="display-4 fw-bold lh-1">
-                            Achieve Excellence with Our STE Program
-                        </h1>
-                        <p class="lead text-background">
-                            Join the Ampayon National High School STE Program and experience a learning environment dedicated to unlocking your full potential. With our advanced curriculum, expert mentorship, and state-of-the-art facilities, we are committed to shaping the future leaders of tomorrow. Take the first step towards success today!
-                        </p>
-                    </div>
-                </div>
+            <button
+               class="carousel-control-prev"
+               type="button"
+               data-bs-target="#myCarousel"
+               data-bs-slide="prev"
+               >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+               class="carousel-control-next"
+               type="button"
+               data-bs-target="#myCarousel"
+               data-bs-slide="next"
+               >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+         </div>
+         <div class="container">
+            <div
+               class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
+               style="background-image: url('images/edit9.jpg'); background-size: cover; background-position: center;"
+               >
+               <div class="col-lg-7 p-3 p-lg-5 pt-lg-3 text-black">
+                  <h1 class="display-4 fw-bold lh-1">
+                     Achieve Excellence with Our STE Program
+                  </h1>
+                  <p class="lead text-background">
+                     Join the Ampayon National High School STE Program and experience a learning environment dedicated to unlocking your full potential. With our advanced curriculum, expert mentorship, and state-of-the-art facilities, we are committed to shaping the future leaders of tomorrow. Take the first step towards success today!
+                  </p>
+               </div>
             </div>
-            <!-- Marketing messaging and featurettes
-                ================================================== -->
-            <!-- Wrap the rest of the page in another container to center all the content. -->
-            <div class="container marketing">
-            <!-- START THE FEATURETTES -->
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <div class="list-group w-auto mb-2">
-                        <h2>Benefits</h2>
-                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom">
-                                <circle cx="12" cy="12" r="1"/>
-                                <path d="M20.2 20.2c2.04-2.04.02-7.07-4.53-11.62-4.55-4.55-9.58-6.57-11.62-4.53-2.04 2.04-.02 7.07 4.53 11.62 4.55 4.55 9.58 6.57 11.62 4.53Z"/>
-                                <path d="M15.7 15.7c4.55-4.55 6.57-9.58 4.53-11.62-2.04-2.04-7.07-.02-11.62 4.53C4.06 13.16 2.04 18.19 4.08 20.23c2.04 2.04 7.07.02 11.62-4.53Z"/>
-                            </svg>
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Advancements in Math, Science, Technology and Engineering</h6>
-                                    <p class="mb-0 opacity-75">Provides students with a strong foundation in science, technology, engineering, and mathematics, preparing them for future careers in high-demand fields and equipping them with valuable critical thinking and problem-solving skills.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope">
-                                <path d="M6 18h8"/>
-                                <path d="M3 22h18"/>
-                                <path d="M14 22a7 7 0 1 0 0-14h-1"/>
-                                <path d="M9 14h2"/>
-                                <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2V9"/>
-                            </svg>
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Explore and Dive into Research</h6>
-                                    <p class="mb-0 opacity-75">Fosters a lifelong love of learning by encouraging curiosity, developing critical thinking skills, and preparing students for success in higher education and their chosen careers.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer">
-                                <path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/>
-                                <path d="M17.64 15 22 10.64"/>
-                                <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/>
-                            </svg>
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Gain Strong Work Ethic</h6>
-                                    <p class="mb-0 opacity-75">Cultivates essential skills like discipline, perseverance, and a commitment to excellence, fostering personal growth and setting the foundation for future success in any endeavor.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb">
-                                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
-                                <path d="M9 18h6"/>
-                                <path d="M10 22h4"/>
-                            </svg>
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Enhance Interests and Abilities</h6>
-                                    <p class="mb-0 opacity-75">Allows students to explore and enhance their interests and abilities, fostering personal growth, boosting self-confidence, and providing a sense of fulfillment that enriches their academic journey and prepares them for success beyond the classroom.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-                                <path d="M4 22h16"/>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
-                            </svg>
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Boosts Confidence</h6>
-                                    <p class="mb-0 opacity-75">Provides a supportive and encouraging environment that helps students boost their confidence, empowering them to embrace challenges, pursue their academic goals with determination, and achieve their full potential.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="image-container" style="border-radius: 5px;">
-                        <img src="images/edit5.jpg" alt="Cropped image" class="cropped-image">
-                    </div>
-                </div>
+         </div>
+         <!-- Marketing messaging and featurettes
+            ================================================== -->
+         <!-- Wrap the rest of the page in another container to center all the content. -->
+         <div class="container marketing">
+         <!-- START THE FEATURETTES -->
+         <hr class="featurette-divider">
+         <div class="row featurette">
+            <div class="col-md-7">
+               <div class="list-group w-auto mb-2">
+                  <h2>Benefits</h2>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom">
+                        <circle cx="12" cy="12" r="1"/>
+                        <path d="M20.2 20.2c2.04-2.04.02-7.07-4.53-11.62-4.55-4.55-9.58-6.57-11.62-4.53-2.04 2.04-.02 7.07 4.53 11.62 4.55 4.55 9.58 6.57 11.62 4.53Z"/>
+                        <path d="M15.7 15.7c4.55-4.55 6.57-9.58 4.53-11.62-2.04-2.04-7.07-.02-11.62 4.53C4.06 13.16 2.04 18.19 4.08 20.23c2.04 2.04 7.07.02 11.62-4.53Z"/>
+                     </svg>
+                     <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                           <h6 class="mb-0">Advancements in Math, Science, Technology and Engineering</h6>
+                           <p class="mb-0 opacity-75">Provides students with a strong foundation in science, technology, engineering, and mathematics, preparing them for future careers in high-demand fields and equipping them with valuable critical thinking and problem-solving skills.</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope">
+                        <path d="M6 18h8"/>
+                        <path d="M3 22h18"/>
+                        <path d="M14 22a7 7 0 1 0 0-14h-1"/>
+                        <path d="M9 14h2"/>
+                        <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2V9"/>
+                     </svg>
+                     <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                           <h6 class="mb-0">Explore and Dive into Research</h6>
+                           <p class="mb-0 opacity-75">Fosters a lifelong love of learning by encouraging curiosity, developing critical thinking skills, and preparing students for success in higher education and their chosen careers.</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer">
+                        <path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/>
+                        <path d="M17.64 15 22 10.64"/>
+                        <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/>
+                     </svg>
+                     <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                           <h6 class="mb-0">Gain Strong Work Ethic</h6>
+                           <p class="mb-0 opacity-75">Cultivates essential skills like discipline, perseverance, and a commitment to excellence, fostering personal growth and setting the foundation for future success in any endeavor.</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb">
+                        <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                        <path d="M9 18h6"/>
+                        <path d="M10 22h4"/>
+                     </svg>
+                     <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                           <h6 class="mb-0">Enhance Interests and Abilities</h6>
+                           <p class="mb-0 opacity-75">Allows students to explore and enhance their interests and abilities, fostering personal growth, boosting self-confidence, and providing a sense of fulfillment that enriches their academic journey and prepares them for success beyond the classroom.</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                        <path d="M4 22h16"/>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                     </svg>
+                     <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                           <h6 class="mb-0">Boosts Confidence</h6>
+                           <p class="mb-0 opacity-75">Provides a supportive and encouraging environment that helps students boost their confidence, empowering them to embrace challenges, pursue their academic goals with determination, and achieve their full potential.</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
             </div>
-            <hr class="featurette-divider">
-            <div class="row featurette mb-3">
-                <div class="col-md-4 order-md-2">
-                    <div class="list-group w-auto mb-2">
-                        <h2 class="text-end">Requirements</h2>
-                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-percent rounded-circle flex-shrink-0">
-                              <line x1="19" x2="5" y1="5" y2="19"></line>
-                              <circle cx="6.5" cy="6.5" r="2.5"></circle>
-                              <circle cx="17.5" cy="17.5" r="2.5"></circle>
-                            </svg>
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Minimum Required Grade</h6>
-                                    <p class="mb-0 opacity-75">Students must achieve a minimum of at least 85% grade of Science, Math and English throughout the first to third grading periods.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy rounded-circle flex-shrink-0">
-                              <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
-                              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
-                            </svg>
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Photocopy of card</h6>
-                                    <p class="mb-0 opacity-75">Student may present photocopy of their card for evaluation to STE school evaluators.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check rounded-circle flex-shrink-0">
-                              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                              <polyline points="14 2 14 8 20 8"></polyline>
-                              <path d="m9 15 2 2 4-4"></path>
-                            </svg>
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Moral Report</h6>
-                                    <p class="mb-0 opacity-75">Students must present possessing a favorable moral report.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-8 order-md-1">
-                    <div class="image-container2 image-container" style="border-radius: 5px;">
-                        <img src="images/edit1.jpg" alt="Cropped image" class="cropped-image2">
-                    </div>
-                </div>
+            <div class="col-md-5">
+               <div class="image-container" style="border-radius: 5px;">
+                  <img src="images/edit5.jpg" alt="Cropped image" class="cropped-image">
+               </div>
             </div>
-        </main>
-        <footer class="footer mt-auto py-3 bg-light">
-            <div class="container">
-                <span class="text-muted"
-                    >&copy; Ampayon National High School | STE | 2025</span
-                    >
+         </div>
+         <hr class="featurette-divider">
+         <div class="row featurette mb-3">
+            <div class="col-md-4 order-md-2">
+               <div class="list-group w-auto mb-2">
+                  <h2 class="text-end">Requirements</h2>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-percent rounded-circle flex-shrink-0">
+                        <line x1="19" x2="5" y1="5" y2="19"></line>
+                        <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                        <circle cx="17.5" cy="17.5" r="2.5"></circle>
+                     </svg>
+                     <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                           <h6 class="mb-0">Minimum Required Grade</h6>
+                           <p class="mb-0 opacity-75">Students must achieve a minimum of at least 85% grade of Science, Math and English throughout the first to third grading periods.</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy rounded-circle flex-shrink-0">
+                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                     </svg>
+                     <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                           <h6 class="mb-0">Photocopy of card</h6>
+                           <p class="mb-0 opacity-75">Student may present photocopy of their card for evaluation to STE school evaluators.</p>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-check rounded-circle flex-shrink-0">
+                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <path d="m9 15 2 2 4-4"></path>
+                     </svg>
+                     <div class="d-flex gap-2 w-100 justify-content-between">
+                        <div>
+                           <h6 class="mb-0">Moral Report</h6>
+                           <p class="mb-0 opacity-75">Students must present possessing a favorable moral report.</p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
             </div>
-        </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
-    </body>
+            <div class="col-md-8 order-md-1">
+               <div class="image-container2 image-container" style="border-radius: 5px;">
+                  <img src="images/edit1.jpg" alt="Cropped image" class="cropped-image2">
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="footer mt-auto py-3 bg-light">
+         <div class="container">
+            <span class="text-muted"
+               >&copy; Ampayon National High School | STE | 2025</span
+               >
+         </div>
+      </footer>
+      <script src="js/bootstrap.bundle.min.js"></script>
+   </body>
 </html>
